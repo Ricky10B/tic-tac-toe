@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.seleccionado {
+  border-bottom-color: #14bdac;
+}
+
+ul li {
+  border: 6.5px solid transparent;
+}
+
+.border1 {
+  border-top-color: transparent;
+}
+
+.border3 {
+  border-left-color: transparent;
+}
+
+.border5 {
+  border-right-color: transparent;
+}
+
+.border7 {
+  border-bottom-color: transparent;
+}
+
+.letra-X {
+  color: rgb(84, 84, 84);
+}
+
+.letra-O {
+  color: #fff;
+}
+
+ul.ganador {
+  opacity: 0;
+  transition: 1.5s opacity ease-in-out;
+}
+
+ul.ganador2 {
+  display: none;
+}
+
+#cuadroGanador.ganador {
+  animation: animacionGanador 1s linear;
+}
+
+#cuadroGanador.ganador2 {
+  display: flex;
+}
+
+@keyframes animacionGanador {
+  0% { transform: scale(.1); }
+  100% { transform: scale(1); }
+}
+
+@media screen and (min-width: 440px) {
+  main > section {
+    width: 60% !important;
+  }
+}
